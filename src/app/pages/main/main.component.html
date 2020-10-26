@@ -1,0 +1,174 @@
+ <div class="header">
+
+    <div class="showBand">
+        <marquee scrollamount="15" behavior="scroll" direction="left">News Go Here! <span> </span> News1 <span> </span> News2</marquee>
+    </div>
+
+    <app-header></app-header>
+
+    
+</div>
+<div class="banner">
+    <div class="container-panel" fxLayout="row"   >
+        <div   fxFlex="70">
+        <ul class="nav  mynavbar"   fxLayout="row" fxLayoutAlign="space-between end">
+            <li ><a class="mynavbar-elements" href="home">Home</a></li>
+            <li   class="dropdown" ><a class="mynavbar-elements" href="#">About Us</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-elements" ref="#">Structure & Key Personnel</a></li>
+                <li><a class="dropdown-elements" href="#">Relations</a></li>
+                <li><a class="dropdown-elements" href="about">Careers</a></li>         
+                </ul>
+            </li>
+            <li class="dropdown"><a class="mynavbar-elements" href="#">Products & Services</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-elements" href="#">Commodity Purchase</a></li>
+                    <li><a class="dropdown-elements" href="#">Crop Forecasting</a></li>
+                    <li><a class="dropdown-elements" href="#">Crop Insurance</a></li>         
+                </ul>
+            </li>
+            <li><a class="mynavbar-elements" href="#">Event Gallery</a></li>
+            
+        </ul>
+        </div>
+        <div  fxLayout="row" fxLayoutAlign="end stretch" fxFlex="30">
+            <button    mat-raised-button color="primary" type="submit">Login</button>
+        </div>
+    </div>
+    <div  style="height: 350px;width: '100%'"> 
+        <ng-image-slider #nav [images]="imageObject" [infinite]="true" [autoSlide]="3"
+        [imageSize]="{width: '100%', height: 350}" slideImage="1" [imagePopup]="false" [direction]=""></ng-image-slider>
+
+
+    </div>
+    <div id="carousel-example" class="carousel slide container-playcards" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div fxFill class="row">
+            <div fxFill style="padding-left: 7%; padding-right: 5%;" >
+                <div  class="carousel-inner" >
+                    <div class="item active">
+                        <div  class="carousel-content"   fxLayout="row" fxLayoutAlign="space-around center">
+                            <mat-card class=" crop-card" style="min-width: 17%" *ngFor="let crop of firstrowcrops">
+                                <mat-card-header>
+                                <img mat-card-avatar class="example-header-image" src='/assets/icons/crops/{{crop.Name}}.PNG' alt="crop-image"/>
+                                <mat-card-title>{{crop.Name}}</mat-card-title>
+                                <mat-card-subtitle>{{crop.Quantity}} Kgs</mat-card-subtitle>
+                                </mat-card-header>
+                                    
+                                <mat-card-content>
+                                    <p>
+                                        PRICE
+                                    </p>
+                                </mat-card-content>
+                    
+                            </mat-card>
+                            </div>
+                    </div>
+                    <div class="item">
+                        <div  class="carousel-content"   fxLayout="row" fxLayoutAlign="space-around center">
+                        <mat-card class=" crop-card" style="min-width: 17%" *ngFor="let crop of secondrowcrops">
+                            <mat-card-header>
+                            <img mat-card-avatar class="example-header-image" src='/assets/icons/crops/{{crop.name}}.PNG' alt="crop-image" />
+                            <mat-card-title>{{crop.Name}}</mat-card-title>
+                            <mat-card-subtitle>{{crop.Quantity}} Kgs</mat-card-subtitle>
+                            </mat-card-header>
+                                
+                            <mat-card-content>
+                                <p>
+                                    PRICE
+                                </p>
+                            </mat-card-content>
+                
+                        </mat-card>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div  class="carousel-content"   fxLayout="row" fxLayoutAlign="space-around center">
+                        <mat-card class=" crop-card" style="min-width: 17%" *ngFor="let crop of thirdrowcrops">
+                            <mat-card-header>
+                            <img mat-card-avatar class="example-header-image" src='/assets/icons/crops/{{crop.name}}.PNG' alt="crop-image" />
+                            <mat-card-title>{{crop.Name}}</mat-card-title>
+                            <mat-card-subtitle>{{crop.Quantity}} Kgs</mat-card-subtitle>
+                            </mat-card-header>
+                                
+                            <mat-card-content>
+                                <p>
+                                    PRICE
+                                </p>
+                            </mat-card-content>
+                
+                        </mat-card>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Controls --> <a fxFlex="5" class="left carousel-control" href="#carousel-example" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+     <a fxFlex="5" class="right carousel-control" href="#carousel-example" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    
+    </div>
+    <div class="border-line" >
+        <p fxFill></p>
+    </div>
+    <div  fxLayout="row" fxLayoutAlign="space-between center">
+        <div  class=" mapcards" fxLayout="column" fxLayoutAlign="space-around center" fxFlex="15">
+            <mat-card class="district-card" style="min-height: 10%" *ngFor="let district of districts">
+                <mat-card-header>
+               
+                <mat-card-title>{{district.District}}</mat-card-title>
+                
+                </mat-card-header>
+                    
+                <mat-card-content>
+                    <p style=" font-size: smaller;">
+                    Area Mapped : {{district.TotalArea}} Acres
+                    </p>
+                    <p style=" font-size: smaller;">
+                        Area Sown : {{district.AreaSown}} Acres
+                    </p>
+                </mat-card-content>
+    
+            </mat-card>
+        </div>
+        <div fxFlex="70">
+            <div id = "map">
+                <img style="height: 600px; width: 100%; padding-left: 25px; padding-right: 25px;" src="/assets/maharashtra-map-english.jpg" usemap="#image-map" >
+            </div>
+            <map name="image-map">
+                <area target="" alt="Ratnagiri" title="Ratnagiri" href="javascript:chartdata('Ratnagiri')"  coords="76,397,103,537,149,525,124,412,95,389" shape="poly" (click)="chartdata('Ratnagiri')"  data-left="147" data-top="440">
+                <area target="" alt="Thane" title="Thane" href="javascript:chartdata('Thane')" coords="72,156,76,228,178,229,140,169" shape="poly" (click)="chartdata('Thane')"  data-left="123" data-top="227">
+            </map>                                           
+        </div>
+        <div class="mapcards" fxLayout="column" fxLayoutAlign="space-around center" fxFlex="15">
+            <mat-card class="district-card" style="min-height: 10%" *ngFor="let district of districts_farmers">
+                <mat-card-header>
+               
+                <mat-card-title>{{district.District}}</mat-card-title>                
+                </mat-card-header>
+                    
+                <mat-card-content>
+                    <p style="font-size: smaller;" >
+                        Farmers Connected : {{district.TotalFarmers}} 
+                    </p>
+                    <p style="font-size: smaller;">
+                        Farmers Currently Sowing : {{district.SowingFarmers}} 
+                    </p>
+                </mat-card-content>
+    
+            </mat-card>
+        </div>
+    </div>
+    <div class="container-contact container-outer" fxLayout="row" fxLayoutAlign="space-around center" >
+        <div class="container" fxFlex="35" fxFill>Feedback Link</div>
+        <div class="container" fxFlex="35" fxFill>Partner With Us</div>
+        <div class="container" fxFlex="35" fxFill>Contact Info</div>
+    </div>
+    <app-footer></app-footer>
+</div> 
+
+

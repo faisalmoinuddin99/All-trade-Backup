@@ -1,0 +1,10 @@
+
+  /* mat-toolbar[color="warn"] {
+	position: sticky;
+	top: var(--default-height);
+  } */
+  
+  #frugalmap {
+	height: 300px;
+	background-color: #EEE;
+  }

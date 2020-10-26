@@ -1,0 +1,36 @@
+
+img.map, map area{
+    width:80%;
+    height: 600px;
+    outline: none;
+}
+
+/* .box{
+  
+  overflow: hidden;
+  color: #fff;
+  border-radius: 10px;
+} */
+
+#map {
+  position:relative
+}
+.map_title {
+  position:absolute;    
+}
+.mapcards{
+  width: 200px;
+}
+
+.text-block {
+    
+    min-width: 70px;
+    min-height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    position:absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(243, 239, 239, 1);
+
+  }
+

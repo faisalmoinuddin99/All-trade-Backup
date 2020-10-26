@@ -1,0 +1,21 @@
+<div fxLayout="row" fxLayoutAlign="start" >
+    <div fxFlex="50" class="container-inner">
+        <label>Crop</label>
+        <select class="form-control" id="ddlTypes" name="ddlTypes">
+        <option selected id="ddlTypes" value="">--Select--</option>
+        <option style="color: black" *ngFor="let crop of Crops" [value]="crop.ID">
+            {{crop.Name}}</option>
+        </select>
+    </div>
+    
+</div>
+<div class="container-inner">
+    <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+    </canvas>
+  </div>
+

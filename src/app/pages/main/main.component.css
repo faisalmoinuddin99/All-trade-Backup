@@ -1,0 +1,140 @@
+
+
+marquee span { 
+    margin-right: 25%; 
+    }
+
+.container-images{
+    height: 350px;
+    width: fit-content;
+    
+}  
+
+.container-playcards{
+    height: 150px;
+    background-color:rgb(211, 211, 211);   
+    
+}
+
+.border-line{
+
+  height: 10px;
+  width: 100%;
+  background-color :red;
+}
+
+
+
+.container-contact{
+    height: 100px;
+    
+}
+
+.mynavbar-elements{
+  color: chartreuse;
+  font-size: medium;
+}
+
+.container-panel{
+    /* top: 75px; */
+   
+    height: 50px;
+    background-color:rgb(0, 0, 0);  
+   
+  }
+
+  .header{
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+
+   
+  }
+
+  .banner{
+    top: 100px;
+    position: relative;
+    z-index: 0;
+  }
+
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+   
+    background-color:white;
+    box-shadow: 2px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-elements{
+    font-size: small;
+  }
+
+  .example-header-image {
+    /* background-image: url('/assets/icons/crops/Wheat.PNG'); */
+    background-size: cover;
+  }
+
+ 
+ 
+  
+  .dropdown:hover .dropdown-menu {display: block; background-color: white;}
+
+.dropdown .dropdown-menu a:hover{background-color:orange; }
+
+
+img.map, map area{
+  /* width:80%;
+  height: 400px; */
+  outline: none;
+}
+
+.mapcards{
+  height: 600px;
+  background-color:rgba(9, 223, 38, 0.979);
+  
+}
+
+#map {
+position:relative
+}
+.map_title {
+position:absolute;    
+}
+
+.map
+.text-block {
+  
+  min-width: 70px;
+  min-height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  position:absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(243, 239, 239, 1);
+
+}
+
+.crop-card{
+  box-shadow: 10px 10px 5px black;
+ border-radius: 10px;
+ 
+}
+
+.district-card{
+  box-shadow: 10px 10px 5px black;
+  background-color: rgb(219, 213, 213);
+}
+
+.carousel-content {
+  color:black;
+  display:flex;
+  align-items:center;
+}
+
+
+
+
+
+

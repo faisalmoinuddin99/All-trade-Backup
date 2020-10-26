@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="space-around center" >
+    <div fxFlex="50" class="container-inner">
+        <label>State</label>
+        <select class="form-control" id="ddlTypes" name="ddlTypes">
+        <option selected id="ddlTypes" value="">--Select--</option>
+        </select>
+    </div>
+    <div fxFlex="50" class="container-inner">
+        <label>District</label>
+        <select class="form-control" id="ddlTypes" name="ddlTypes">
+        <option selected id="ddlTypes" value="">--Select--</option>
+        </select>
+    </div>
+</div>
+<div class="container-inner">
+    <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType">
+    </canvas>
+  </div>

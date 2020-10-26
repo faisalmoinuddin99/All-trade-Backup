@@ -1,0 +1,211 @@
+ body{
+ 	height: 100%;
+ 	}
+ .bg{
+	background:url('../img/banner-bg.jpg');
+ 	height:100vh;
+	min-height:100vh;
+  	/* Center and scale the image nicely */
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+.overlay{
+	height:100vh;
+	min-height:100vh;
+	background:rgba(0,0,0,0.7);
+}
+.bg .overlay .navbar-light .navbar-nav .nav-link{
+	color: #FFFFFF;
+}
+
+.bg .overlay .bg-light {
+    background-color: transparent !important;
+}
+.bg .overlay .navbar-light .navbar-nav .nav-link:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,0.7)!important;
+}
+
+.bg .overlay input, .bg .overlay select {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  display: block;
+  outline: none;
+  width: 300px;
+  max-width: 300px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 10px;
+  color: #fff;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+  border-radius: 24px;
+  background-image: url(../img/icons/user-login.png);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+}
+
+.bg .overlay input.pass {
+  background-image: url(../img/icons/lock.png);
+  background-position: 97% center;
+  background-repeat: no-repeat;	
+}
+
+.bg .overlay select{
+	padding: 0;
+    padding-left: 6px;
+}
+
+.btn-container{
+	margin-top: 10px;
+	width: 300px
+}
+.finger-print{
+	width: 50%;
+    border-radius: 50%;
+    border: 1px solid #dc3545;
+    padding: 4px;
+}
+.btn-pd{
+	padding: 0px .75rem;
+   /* border-radius: 8px;*/
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    background: rgb(230,51,58);
+}
+
+footer{
+	margin-top: 100px;
+	color: #FFF;
+}
+
+::-webkit-input-placeholder { color: rgba(255,255,255,0.5);} 
+:-moz-placeholder { color: #666; }
+::-moz-placeholder { color: #666; }
+:-ms-input-placeholder { color: #666; }
+
+.login-logo{
+	margin: 30px 0 35px;
+}
+
+select#soflow, select#soflow-color {
+	background: rgba(255,255,255,0.2);
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(../img/icons/triagle.png);
+   background:rgba(255,255,255,0.2); 
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 0px solid;
+   color: #555;
+   font-size: inherit;
+   overflow: hidden;
+   padding: 2px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+
+select#soflow-color {
+   color: rgba(255,255,255,0.5);
+   background-image: url(../img/icons/triagle.png);
+   background-color: rgba(255,255,255,0.2);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 15px;
+}
+
+select#soflow-color option{
+	 -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 15px;
+    color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(../img/icons/hamburger-menu.png);
+}
+
+.navbar-light .navbar-toggler {
+     color: transparent; 
+     border-color: transparent; 
+}
+.navbar-toggler{
+	border: none !important;
+}
+.navbar-nav{
+	text-align: right;
+}
+.modal-header{
+	background: #252830;
+	border-radius: 0;
+	padding: 6px 12px;
+}
+.modal-title {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+.modal-footer{
+	border-radius: 0;
+	background: #252830;
+    margin-top: -1px;
+    padding: 10px 12px;
+    justify-content: unset;
+}
+.modal-body{
+	background: #3e414a;
+    margin-top: -1px;
+        padding: 2rem 1rem;
+}
+.modal-body .form-control{
+	padding: .220rem .75rem;
+    font-size: 0.85rem;
+}
+.modal-footer .btn-pd, .modal-body .btn-pd{
+	font-weight: normal;
+	font-size: 12px
+}
+.modal-body label{
+	color: #b2b2b2;
+}
+.wid50{
+	width: 50%;
+}
+.wid70{
+	width: 70%;
+}
+.modal-backdrop.show {
+   opacity: 0.8 !important;
+}
+.validate-btn{
+	position: relative;
+    top: -26px;
+    left: -33px;
+}
+.validate-btn-left {
+    left: 4px;
+}
+
+@media (max-width: 575.98px) {
+	.validate-btn{
+		left: 10px;
+	}
+	.validate-btn-left {
+	    font-size: 12px;
+   		top: 10px;
+   	}
+}
+@media (min-width: 576px) {
+
+}
