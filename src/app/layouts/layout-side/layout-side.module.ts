@@ -8,7 +8,8 @@ import { ReportDistrictComponent } from 'src/app/pages/report-district/report-di
 import { ReportCropComponent } from 'src/app/pages/report-crop/report-crop.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ChartsModule } from 'ng2-charts';
-import * as $ from "jquery";
+
+
 
 
 

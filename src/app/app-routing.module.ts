@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LayoutFullComponent } from './layouts/layout-full/layout-full.component';
 import { LayoutSideComponent } from './layouts/layout-side/layout-side.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AllTradesComponent } from './pages/all-trades/all-trades.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ImageMapComponent } from './pages/image-map/image-map.component';
 //import { LayoutFullComponent } from './layouts/layout-full/layout-full.component';
@@ -21,16 +23,7 @@ const routes: Routes = [
     //   },
     // ],
   },
-  {
-    path: 'about',
-    component: AboutComponent,
-    // children: [
-    //   {
-    //     path: '',
-    //     component: LoginComponent,
-    //   },
-    // ],
-  },
+  
   {
     path: 'map',
     component: ImageMapComponent,
@@ -40,6 +33,22 @@ const routes: Routes = [
     //     component: LoginComponent,
     //   },
     // ],
+  },
+  {
+    path: 'all-trades',
+    component: AllTradesComponent,
+    
+  },
+  {
+    path: '',
+    component: LayoutFullComponent,
+    children: [
+      
+      {
+        path: 'about',
+        component: AboutComponent,        
+      },
+    ],
   },
   {
     path: '',
@@ -57,6 +66,7 @@ const routes: Routes = [
         path: 'report-crop',
         component: ReportCropComponent,
       },
+      
     ],
   },
 ];

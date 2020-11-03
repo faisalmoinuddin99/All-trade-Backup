@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="start stretch">
+        <div class="container-outer" fxFlex="20" >
+            <div class="filters">
+                <section class="example-section">
+                  <span class="example-list-section">
+                    <h1>Select Crop</h1>
+                  </span>
+                  <span class="example-list-section">
+                    <ul>
+                      <li *ngFor="let crop of crops">
+                        <mat-checkbox [(ngModel)]="crop.name"
+                             
+                                      >
+                          {{crop.name}}
+                        </mat-checkbox>
+                      </li>
+                    </ul>
+                  </span>
+                </section>
+              
+                <section class="example-section">
+                  <span class="example-list-section">
+                    <h1>Select District</h1>
+                  </span>
+                  <span class="example-list-section">
+                    <ul>
+                      <li *ngFor="let district of districts">
+                        <mat-checkbox [(ngModel)]="district.name"
+                            
+                                      >
+                          {{district.name}}
+                        </mat-checkbox>
+                      </li>
+                    </ul>
+                  </span>
+                </section>
+              </div>
+        </div>
+        <div class="content container-outer" fxFlex="80" >
+            <mat-card class="crop-card" style="min-width: 17%" *ngFor="let crop of crops">
+                <mat-card-header>
+                <img mat-card-avatar class="example-header-image" src='/assets/icons/crops/{{crop.name}}.PNG' alt="crop-image"/>
+                <mat-card-title>{{crop.name}}</mat-card-title>
+                <mat-card-subtitle>100 Kgs</mat-card-subtitle>
+                </mat-card-header>        
+                <mat-card-content>
+                    <p>
+                        PRICE
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+</div>
+
+
+<app-footer></app-footer>
+

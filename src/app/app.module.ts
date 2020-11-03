@@ -22,16 +22,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutSideModule } from './layouts/layout-side/layout-side.module';
 
 import { MainComponent } from './pages/main/main.component';
-import { AboutComponent } from './pages/about/about.component';
+
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ImageMapComponent } from './pages/image-map/image-map.component';
 import { ChartsModule } from 'ng2-charts';
-import * as $ from "jquery";
+import { LayoutFullModule } from './layouts/layout-full/layout-full.module';
+
+import { AllTradesComponent } from './pages/all-trades/all-trades.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent, MainComponent, AboutComponent,ImageMapComponent
+    AppComponent,LoginComponent, MainComponent,ImageMapComponent,AllTradesComponent
 
   ],
   imports: [
@@ -49,12 +54,15 @@ import * as $ from "jquery";
     FormsModule,
     ReactiveFormsModule,
     LayoutSideModule,
+    LayoutFullModule,
     MatMenuModule,
     MatListModule,
     NgImageSliderModule,
     MatDialogModule,
     ChartsModule,
-    MatIconModule
+    MatIconModule,
+    MatCheckboxModule
+    
 
     
     
