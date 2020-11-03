@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {Login }  from '../../Model/Login';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/shared/services/auth-service.service';
 import { Router } from '@angular/router';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
   sessiontoken: any[];
   
     
-  constructor(private authservice:AuthServiceService,private router: Router) { }
+  constructor(private authservice:AuthServiceService,private router: Router,public dialogRef: MatDialogRef<LoginComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
     this.initForm()

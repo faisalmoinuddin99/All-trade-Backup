@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { MainServiceService } from 'src/app/shared/services/main-service.service';
 import { ImageMapComponent } from '../image-map/image-map.component';
+import { LoginComponent } from '../login/login.component';
 
 
 @Component({
@@ -38,7 +40,7 @@ export class MainComponent implements OnInit {
 }
 ];
 
-  constructor(private dialog: MatDialog,private _mainService: MainServiceService) { }
+  constructor(private dialog: MatDialog,private _mainService: MainServiceService,private router: Router) { }
 
   ngOnInit(): void {
 
@@ -123,5 +125,16 @@ export class MainComponent implements OnInit {
       {
           $(this).css('height','150px');
       });
+  }
+
+  ShowLoginPopup(){
+    console.log("Reached Showloginpopup");
+  //this.router.navigate(['\login']);
+  const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    // dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    dialogConfig.data = name;
+    this.dialog.open(LoginComponent,dialogConfig);
   }
 }

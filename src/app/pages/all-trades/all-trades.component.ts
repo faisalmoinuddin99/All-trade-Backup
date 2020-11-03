@@ -6,12 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-trades.component.css']
 })
 export class AllTradesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+ 
   crops = [{name:'Rice'},
   {name:'Wheat'},
   {name:'Barley'},
@@ -23,6 +18,14 @@ export class AllTradesComponent implements OnInit {
   {name:'Ratnagiri',totalarea:'105',areasown:'75',totalfarmers:10,sowingfarmers:5},
   {name:'Pune',totalarea:'20',areasown:'15',totalfarmers:1,sowingfarmers:1},
   ];
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
 
  
 }

@@ -2,10 +2,10 @@
     <div>
         <app-header ></app-header>
     </div>
-    <div   fxFlex="80">
-        <div class="main-div" fxLayoutAlign="center center" fxFlexFill [class.alternative]= "isTrue">
+    <div   >
+        <div class="main-div"  >
         
-            <mat-card  fxFlex="35">
+            <mat-card  >
             <mat-toolbar color="primary">LOGIN </mat-toolbar>
                 <form fxLayout="column" fxLayoutAlign="stretch" class="login-form" [formGroup]="loginform" 
                 (ngSubmit)="IsValidLogin()">
@@ -31,7 +31,5 @@
             </mat-card>
         </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="end end">
-        <app-footer  fxLayout="row" fxLayoutAlign="end end"></app-footer>
-    </div>
+   
 </div>
