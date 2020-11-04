@@ -133,7 +133,8 @@ export class MainComponent implements OnInit {
   const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     // dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
+    dialogConfig.width = "40%";
+    //dialogConfig.height = "40%";
     dialogConfig.data = name;
     this.dialog.open(LoginComponent,dialogConfig);
   }
