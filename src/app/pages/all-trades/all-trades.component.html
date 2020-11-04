@@ -9,8 +9,8 @@
                   <span class="example-list-section">
                     <ul>
                       <li *ngFor="let crop of crops">
-                        <mat-checkbox [(ngModel)]="crop.name"
-                             
+                        <mat-checkbox 
+                        (change)="onChange($event, crop)"
                                       >
                           {{crop.name}}
                         </mat-checkbox>
@@ -26,7 +26,7 @@
                   <span class="example-list-section">
                     <ul>
                       <li *ngFor="let district of districts">
-                        <mat-checkbox [(ngModel)]="district.name"
+                        <mat-checkbox 
                             
                                       >
                           {{district.name}}
