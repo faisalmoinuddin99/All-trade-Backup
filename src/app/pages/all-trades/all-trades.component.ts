@@ -25,7 +25,15 @@ export class AllTradesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  onChange(event, crop) {
+
+    //item.checked = !item.checked;
+
+    //this.lastAction = 'index: ' + index + ', label: ' + item.label + ', checked: ' + item.checked;
+
+    console.log( event, crop);
+
+}
 
  
 }
