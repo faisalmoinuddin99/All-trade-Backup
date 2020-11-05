@@ -30,13 +30,21 @@ import { LayoutFullModule } from './layouts/layout-full/layout-full.module';
 
 import { AllTradesComponent } from './pages/all-trades/all-trades.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { PhoneRegPageComponent } from './pages/register/phone-reg-page/phone-reg-page.component';
+import { RegisterPageComponent } from './pages/register/register-page/register-page.component';
+import { UploadDocComponent } from './pages/register/upload-doc/upload-doc.component';
+import { StructureKeyPersonnelComponent } from './pages/structure-key-personnel/structure-key-personnel.component';
+import { InvestorRelationComponent } from './pages/investor-relation/investor-relation.component';
+import { CommodityPurchaseComponent } from './pages/commodity-purchase/commodity-purchase.component';
+import { CropForecastingComponent } from './pages/crop-forecasting/crop-forecasting.component';
+import { CropInsuranceComponent } from './pages/crop-insurance/crop-insurance.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent, MainComponent,ImageMapComponent,AllTradesComponent
+    AppComponent,LoginComponent, MainComponent,ImageMapComponent,AllTradesComponent,    
 
   ],
   imports: [
