@@ -14,6 +14,16 @@
 
 </head>
 <body class="mat-typography">
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('ul li a').click(function () {
+        $('li a').removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+
+
   <app-root></app-root>
   <!-- <script src= "/node_modules/chart.js/src/chart.js"></script> -->
 </body>

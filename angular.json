@@ -25,12 +25,16 @@
             ],
             "styles": [
               "src/theme.scss",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
+            
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.min.js"],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ],
             "allowedCommonJsDependencies": [
               "chart.js"
-           ]
+            ]
           },
           "configurations": {
             "production": {
@@ -126,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "farmayu-reporting"
+  "defaultProject": "farmayu-reporting",
+  "cli": {
+    "analytics": "c027f1c5-5f5c-4875-94c1-5e9c7670c074"
+  }
 }
