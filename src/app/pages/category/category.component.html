@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div
+  fxLayout="row"
+  fxLayout.lt-md="column"
+  fxLayoutAlign="space-between start"
+  fxLayoutAlign.lt-md="start stretch"
+>
+  <div class="container-outer" fxFlex="20">
+    <div class="filters">
+      <section class="example-section">
+        <span class="example-list-section">
+          <h1>Select Crop</h1>
+        </span>
+        <span class="example-list-section">
+          <ul>
+            <li
+              class="list-group-item"
+              *ngFor="let category of category$ | async"
+            >
+              <mat-checkbox
+                [checked]="category.checked"
+                (change)="onChange($event, i, category)"
+              >
+                {{ category.name }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </section>
+    </div>
+  </div>
+  <div class="content container-outer" fxFlex="80">
+    <mat-card
+      class="crop-card"
+      style="min-width: 17%"
+      *ngFor="let category of category$ | async"
+      [hidden]="!category.checked"
+    >
+      <mat-card-header>
+        <img
+          mat-card-avatar
+          class="example-header-image"
+          src="/assets/icons/crops/{{ category.name }}.PNG"
+          alt="crop-image"
+        />
+
+        <mat-card-title>{{ category.name }}</mat-card-title>
+        <mat-card-subtitle>100 Kgs</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>PRICE</p>
+      </mat-card-content>
+      <app-dialog-box></app-dialog-box>
+    </mat-card>
+  </div>
+</div>
+<div></div>
+<app-footer></app-footer>

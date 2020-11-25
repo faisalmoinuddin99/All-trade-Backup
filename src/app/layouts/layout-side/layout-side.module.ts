@@ -17,7 +17,9 @@ import { UploadDocComponent } from 'src/app/pages/register/upload-doc/upload-doc
 
 
 @NgModule({
-  declarations: [LayoutSideComponent,HomeComponent, ReportDistrictComponent,ReportCropComponent, PhoneRegPageComponent, RegisterPageComponent, UploadDocComponent],
+  declarations: [LayoutSideComponent,HomeComponent, ReportDistrictComponent,
+    ReportCropComponent, PhoneRegPageComponent, RegisterPageComponent,
+     UploadDocComponent],
   imports: [
     CommonModule,
     SharedModule,

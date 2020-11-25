@@ -4,6 +4,7 @@ import { LayoutFullComponent } from './layouts/layout-full/layout-full.component
 import { LayoutSideComponent } from './layouts/layout-side/layout-side.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AllTradesComponent } from './pages/all-trades/all-trades.component';
+import { CategoryComponent } from './pages/category/category.component';
 import { CommodityPurchaseComponent } from './pages/commodity-purchase/commodity-purchase.component';
 import { CropForecastingComponent } from './pages/crop-forecasting/crop-forecasting.component';
 import { CropInsuranceComponent } from './pages/crop-insurance/crop-insurance.component';
@@ -32,10 +33,10 @@ const routes: Routes = [
     // ],
   },
   {
-        path: 'login',
-        component: LoginComponent,
+    path: 'login',
+    component: LoginComponent,
   },
-  
+
   {
     path: 'map',
     component: ImageMapComponent,
@@ -46,19 +47,23 @@ const routes: Routes = [
     //   },
     // ],
   },
-  {
-    path: 'all-trades',
-    component: AllTradesComponent,
-    
-  },
+  // {
+  //   path: 'all-trades',
+  //   component: AllTradesComponent,
+
+  // }, //{ path: "crop/:category", component: CropComponent },
+  { path: "", pathMatch: "full", redirectTo: "crop" },
+  // { path: "crop", component: GharComponent },
+  { path: 'all-trades', component: AllTradesComponent, },
+  { path: "all-trades/:category", component: CategoryComponent },
   {
     path: '',
     component: LayoutFullComponent,
     children: [
-      
+
       {
         path: 'about',
-        component: AboutComponent,        
+        component: AboutComponent,
       },
       {
         path: 'structure-key-personnel',
@@ -67,7 +72,7 @@ const routes: Routes = [
       {
         path: 'investor-relation',
         component: InvestorRelationComponent
-      },{
+      }, {
         path: 'commodity-purchase',
         component: CommodityPurchaseComponent
       },
@@ -95,9 +100,9 @@ const routes: Routes = [
       {
         path: 'report-crop',
         component: ReportCropComponent,
-      }, 
+      },
       {
-        path:'phone-reg-page',
+        path: 'phone-reg-page',
         component: PhoneRegPageComponent
       },
       {
@@ -107,8 +112,9 @@ const routes: Routes = [
       {
         path: 'upload-doc',
         component: UploadDocComponent
-      }
-      
+      },
+
+
     ],
   },
 ];

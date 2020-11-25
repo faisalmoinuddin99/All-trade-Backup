@@ -1,0 +1,9 @@
+.crop-card {
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  width: 80%;
+  margin: 25px;
+}
+.filters {
+  min-height: 600px;
+}

@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './pages/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,13 +37,15 @@ import { InvestorRelationComponent } from './pages/investor-relation/investor-re
 import { CommodityPurchaseComponent } from './pages/commodity-purchase/commodity-purchase.component';
 import { CropForecastingComponent } from './pages/crop-forecasting/crop-forecasting.component';
 import { CropInsuranceComponent } from './pages/crop-insurance/crop-insurance.component';
-
+import { RouterModule } from '@angular/router';
+import { CategoryComponent } from './pages/category/category.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent, MainComponent,ImageMapComponent,AllTradesComponent,    
+    AppComponent, LoginComponent, MainComponent, ImageMapComponent,
+    AllTradesComponent, CategoryComponent,
 
   ],
   imports: [
@@ -69,14 +70,16 @@ import { CropInsuranceComponent } from './pages/crop-insurance/crop-insurance.co
     MatDialogModule,
     ChartsModule,
     MatIconModule,
-    MatCheckboxModule
-    
+    MatCheckboxModule,
 
-    
-    
+
+
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }

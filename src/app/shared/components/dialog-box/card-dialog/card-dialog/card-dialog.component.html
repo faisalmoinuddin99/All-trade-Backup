@@ -1,0 +1,48 @@
+<form #bidForm="ngForm" appIdentityRevealed>
+  <div>
+    <div
+      class="cross-validation"
+      [class.cross-validation-error]="
+        bidForm.errors?.identityRevealed && (bidForm.touched || bidForm.dirty)
+      "
+    >
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Quantity</label>
+          <input
+            id="quantity"
+            name="quantity"
+            type="number"
+            class="form-control"
+            required
+            placeholder="Quantity(QTL)*"
+            [(ngModel)]="bid.quantity"
+            #name="ngModel"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="name">Price</label>
+          <input
+            id="price"
+            name="price"
+            type="number"
+            class="form-control"
+            required
+            minlength="4"
+            placeholder="Price(₹/QTL)"
+            [(ngModel)]="bid.price"
+            #name="ngModel"
+          />
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary btn-lg btn-block"
+      [disabled]="bidForm.invalid"
+    >
+      Send offer
+    </button>
+  </div>
+</form>
